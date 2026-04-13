@@ -10,11 +10,10 @@ public static class Menu
         
         while (true)
         {
-            String userInput = "";
             Console.WriteLine("1 - Cartão \n" +
                             "2 - Boleto \n" +
                             "3 - Sair \n");
-            userInput = Console.ReadLine();
+            String userInput = Console.ReadLine();
             if(userInput == "1")
             {
                 Console.WriteLine("\nMétodo escolhido: Cartão\n");
