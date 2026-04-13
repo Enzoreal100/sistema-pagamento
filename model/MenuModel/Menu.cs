@@ -66,9 +66,9 @@ public static class Menu
 
     private static string GetCardNumber()
     {
-        Console.WriteLine("Digite o número do cartão (apenas números): \n");
+        Console.WriteLine("Digite o número do cartão: \n");
         string cardNumber = Console.ReadLine();
-        if (!string.IsNullOrEmpty(cardNumber) && cardNumber.All(char.IsDigit))
+        if (!string.IsNullOrEmpty(cardNumber))
         {
             return cardNumber;
         }
@@ -81,9 +81,9 @@ public static class Menu
 
     private static string GetBilletBarCode()
     {
-        Console.WriteLine("Digite o código de barras do boleto (apenas números): \n");
+        Console.WriteLine("Digite o código de barras do boleto: \n");
         string barCode = Console.ReadLine();
-        if (!string.IsNullOrEmpty(barCode) && barCode.All(char.IsDigit))
+        if (!string.IsNullOrEmpty(barCode))
         {
             return barCode;
         }
