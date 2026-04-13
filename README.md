@@ -2,8 +2,6 @@
 
 [![C#](https://img.shields.io/badge/C%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white)]()
 [![.NET](https://img.shields.io/badge/.NET-%235C2D91.svg?style=for-the-badge&logo=.net&logoColor=white)]()
-![alt text](testsEvidence/image.png)
-![alt text](testsEvidence/image2.png)
 
 Um sistema de pagamento simples implementado em C# para demonstrar os princípios de orientação a objetos e design de software. Este projeto visa fornecer uma base para sistemas de pagamento mais complexos e personalizáveis.
 
@@ -13,9 +11,16 @@ Um sistema de pagamento simples implementado em C# para demonstrar os princípio
 *   Gustavo Pasquini - RM555454
 *   Hellen Aparecida - RM
 *   Lorenzo Acquesta - RM
+
 ## Descrição
 
 Este repositório contém um sistema de pagamento básico que suporta dois métodos de pagamento: cartão de crédito e boleto bancário. O sistema é projetado para ser extensível, permitindo a fácil adição de outros métodos de pagamento no futuro. A interface do usuário é simulada através do console.
+
+## Evidências
+
+![alt text](testsEvidence/image.png)
+
+![alt text](testsEvidence/image2.png)
 
 ## Tecnologias Utilizadas
 
