@@ -21,7 +21,7 @@ public static class Menu
             }
             else if (userInput == "2")
             {
-                Console.WriteLine("Método escolhido: Cartão");
+                Console.WriteLine("Método escolhido: Boleto\n");
                 // chama metodo pagamento boleto
             }
             else if (userInput == "3")
