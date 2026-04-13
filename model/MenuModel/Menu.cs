@@ -1,3 +1,5 @@
+using sistema_pagamento.Interfaces;
+
 namespace sistema_pagamento.Model;
 
 public static class Menu
@@ -17,7 +19,9 @@ public static class Menu
             if(userInput == "1")
             {
                 Console.WriteLine("\nMétodo escolhido: Cartão\n");
-                // chama metodo pagamento cartao
+                CardPayment cardPayment = new CardPayment(100.00m, "1234-5678-9012-3456");
+                Console.WriteLine(cardPayment.ProcessPayment());
+                Console.WriteLine(cardPayment.ReciptEmission());
             }
             else if (userInput == "2")
             {
