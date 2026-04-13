@@ -1,4 +1,4 @@
-namespace model.MenuModel;
+namespace sistema_pagamento.Model;
 
 public static class Menu
 {
