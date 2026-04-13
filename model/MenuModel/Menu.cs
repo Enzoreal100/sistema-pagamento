@@ -1,3 +1,4 @@
+using System.Diagnostics.Contracts;
 using sistema_pagamento.Interfaces;
 
 namespace sistema_pagamento.Model;
@@ -7,6 +8,9 @@ public static class Menu
     public static void StartMenu()
     {
         Console.WriteLine("========= SISTEMA DE PAGAMENTO ==============");
+
+        decimal amount = GetPaymentAmount();
+
         Console.WriteLine("Selecione uma forma de pagamento:");
         // Print seleção de formas de pagamento
         
@@ -19,7 +23,8 @@ public static class Menu
             if(userInput == "1")
             {
                 Console.WriteLine("\nMétodo escolhido: Cartão\n");
-                CardPayment cardPayment = new CardPayment(100.00m, "1234-5678-9012-3456");
+                string cardNumber = GetCardNumber();
+                CardPayment cardPayment = new CardPayment(amount, cardNumber);
                 Console.WriteLine(cardPayment.ProcessPayment());
                 Console.WriteLine(cardPayment.ReciptEmission());
             }
@@ -38,6 +43,36 @@ public static class Menu
                 Console.WriteLine("Selecione uma das opções disponíveis");
                 continue;
             }
+        }
+    }
+
+    private static decimal GetPaymentAmount()
+    {
+        Console.WriteLine("Qual o valor do pagamento? \n");
+        string amountInput = Console.ReadLine();
+        if (decimal.TryParse(amountInput, out decimal amount) && amount > 0)
+        {
+            return amount;
+        }
+        else
+        {
+            Console.WriteLine("Valor inválido. Tente novamente.");
+            return GetPaymentAmount();
+        }
+    }
+
+    private static string GetCardNumber()
+    {
+        Console.WriteLine("Digite o número do cartão: \n");
+        string cardNumber = Console.ReadLine();
+        if (!string.IsNullOrEmpty(cardNumber))
+        {
+            return cardNumber;
+        }
+        else
+        {
+            Console.WriteLine("Número de cartão inválido. Tente novamente.");
+            return GetCardNumber();
         }
     }
 }
