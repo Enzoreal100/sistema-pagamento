@@ -1,6 +1,6 @@
 using sistema_pagamento.Model;
 
-namespace sistema_pagamento.Interfaces;
+namespace sistema_pagamento.Model;
 
 public class CardPayment : BasePayment
 {

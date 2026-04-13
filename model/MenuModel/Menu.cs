@@ -31,7 +31,10 @@ public static class Menu
             else if (userInput == "2")
             {
                 Console.WriteLine("Método escolhido: Boleto\n");
-                // chama metodo pagamento boleto
+                string barCode = GetBilletBarCode();
+                BilletPayment billetPayment = new BilletPayment(amount, barCode);
+                Console.WriteLine(billetPayment.ProcessPayment());
+                Console.WriteLine(billetPayment.ReciptEmission());
             }
             else if (userInput == "3")
             {
@@ -63,9 +66,9 @@ public static class Menu
 
     private static string GetCardNumber()
     {
-        Console.WriteLine("Digite o número do cartão: \n");
+        Console.WriteLine("Digite o número do cartão (apenas números): \n");
         string cardNumber = Console.ReadLine();
-        if (!string.IsNullOrEmpty(cardNumber))
+        if (!string.IsNullOrEmpty(cardNumber) && cardNumber.All(char.IsDigit))
         {
             return cardNumber;
         }
@@ -73,6 +76,21 @@ public static class Menu
         {
             Console.WriteLine("Número de cartão inválido. Tente novamente.");
             return GetCardNumber();
+        }
+    }
+
+    private static string GetBilletBarCode()
+    {
+        Console.WriteLine("Digite o código de barras do boleto (apenas números): \n");
+        string barCode = Console.ReadLine();
+        if (!string.IsNullOrEmpty(barCode) && barCode.All(char.IsDigit))
+        {
+            return barCode;
+        }
+        else
+        {
+            Console.WriteLine("Código de barras inválido. Tente novamente.");
+            return GetBilletBarCode();
         }
     }
 }
