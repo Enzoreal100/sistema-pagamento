@@ -16,6 +16,6 @@ public abstract class BasePayment : IPayment
     public abstract string ProcessPayment();
     public string ReciptEmission()
     {
-        return $"Recibo: \nValor: {Amount} \nData: {Date}";
+        return $"Recibo: \nValor: {Amount} \nData: {Date:dd/MM/yyyy}";
     }
 }
