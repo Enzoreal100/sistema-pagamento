@@ -8,14 +8,12 @@ public static class Menu
     public static void StartMenu()
     {
         Console.WriteLine("========= SISTEMA DE PAGAMENTO ==============");
-
-        decimal amount = GetPaymentAmount();
-
-        Console.WriteLine("Selecione uma forma de pagamento:");
-        // Print seleção de formas de pagamento
         
         while (true)
         {
+            decimal amount = GetPaymentAmount();
+
+            Console.WriteLine("Selecione uma forma de pagamento:");
             Console.WriteLine("1 - Cartão \n" +
                             "2 - Boleto \n" +
                             "3 - Sair \n");
