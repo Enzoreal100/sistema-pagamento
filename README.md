@@ -6,11 +6,11 @@
 Um sistema de pagamento simples implementado em C# para demonstrar os princípios de orientação a objetos e design de software. Este projeto visa fornecer uma base para sistemas de pagamento mais complexos e personalizáveis.
 
 ## Integrantes
-*   Alexia Ramalho - RM
+*   Alexia Ramalho - RM 558385
 *   Enzo Real - RM557943
 *   Gustavo Pasquini - RM555454
-*   Hellen Aparecida - RM
-*   Lorenzo Acquesta - RM
+*   Hellen Aparecida - RM 559008
+*   Lorenzo Acquesta - RM 557397
 
 ## Descrição
 
